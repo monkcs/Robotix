@@ -33,10 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="WiringPiSharp, Version=0.5.5825.42091, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Robotix\MONKCs studios - Robotix - kopia\WiringPiSharp\bin\Release\WiringPiSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache.cs" />
-    <Compile Include="IPhysicalCommandCommunication.cs" />
     <Compile Include="PhysicalCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -44,10 +47,6 @@
     <ProjectReference Include="..\RobotixTools\RobotixTools.csproj">
       <Project>{ba72003d-5ffb-4abd-9246-ca6cc82c087b}</Project>
       <Name>RobotixTools</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WiringPiSharp\WiringPiSharp.csproj">
-      <Project>{7365201a-7656-4910-9666-8c082e154757}</Project>
-      <Name>WiringPiSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
