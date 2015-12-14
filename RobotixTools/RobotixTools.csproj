@@ -39,6 +39,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Serialization" />
+    <Reference Include="WiringPiSharp, Version=0.5.5825.42091, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Robotix\MONKCs studios - Robotix - kopia\WiringPiSharp\bin\Release\WiringPiSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommunicationCodes.cs" />
@@ -47,12 +51,6 @@
     <Compile Include="External\Pin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialize.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WiringPiSharp\WiringPiSharp.csproj">
-      <Project>{7365201a-7656-4910-9666-8c082e154757}</Project>
-      <Name>WiringPiSharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
