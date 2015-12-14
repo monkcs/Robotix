@@ -9,7 +9,7 @@ namespace Robotix
     /// <summary>
     /// Class control for the GPIO pin 
     /// </summary>
-    public class PhysicalCommand : IPhysicalCommandCommunication, IDisposable
+    public class PhysicalCommand : IDisposable
     {
         /// <summary>
         /// State changed in communication with physical equipment
