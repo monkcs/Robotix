@@ -132,19 +132,14 @@ namespace Robotix.External
         /// </summary>
         public void Dispose()
         {
-            /*
+            
             try
             {
-                if (PhysicalPin.PinDirection == GPIODirection.Out)
+                if (Direction == WiringPi.PinMode.Output)
                 {
-                    PhysicalPin.Write(false);
-                }
-                if (!PhysicalPin.IsDisposed)
-                {
-                    PhysicalPin.Dispose();
+                    Write(false);
                 }
             } catch { }
-            //*/
         }
     }
 }
