@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Robotix.External;
 using WiringPiSharp;
+using static WiringPiSharp.WiringPi;
 
 namespace Robotix
 {
@@ -48,7 +49,7 @@ namespace Robotix
         /// The runner thread
         /// </summary>
         Thread Runner;
-        
+
         /// <summary>
         /// Class control for the GPIO pin 
         /// </summary>
@@ -63,17 +64,7 @@ namespace Robotix
         protected virtual void Initiate()
         {
             Setup.WiringPiPiSetup();
-            AvaliblePin.Add(new DigitalPin(WiringPi.WPiPinout.P0, WiringPi.PinMode.Output, true, "led1", WiringPi.PullMode.Off));
-            new Thread(() =>
-            {
-                while (true)
-                {
-                    GetPin<DigitalPin>("led1").Write(true);
-                    Thread.Sleep(1000);
-                    GetPin<DigitalPin>("led1").Write(false);
-                    Thread.Sleep(1000);
-                }
-            }).Start();
+            AvaliblePin.Add(new DigitalPin(WPiPinout.P0, PinMode.Output, true, "led1", PullMode.Off));
         }
 
         /// <summary>
@@ -199,7 +190,7 @@ namespace Robotix
             {
                 try
                 {
-                    if (AvaliblePin[index].Direction == WiringPi.PinMode.Output)
+                    if (AvaliblePin[index].Direction == PinMode.Output)
                     {
                         AvaliblePin[index].Write(false);
                     }
@@ -260,7 +251,7 @@ namespace Robotix
         /// <typeparam name="T">Pin or derived type of pin</typeparam>
         /// <param name="pin">Pin of the object</param>
         /// <returns></returns>
-        protected T GetPin<T>(WiringPi.WPiPinout pin) where T :DigitalPin
+        protected T GetPin<T>(WPiPinout pin) where T : DigitalPin
         {
             try
             {
@@ -302,11 +293,6 @@ namespace Robotix
             {
                 item.Dispose();
             }
-        }
-
-        public void Invoke(object rawData)
-        {
-            throw new NotImplementedException();
         }
     }
 }
