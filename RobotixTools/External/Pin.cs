@@ -1,5 +1,6 @@
 ﻿using System;
 using WiringPiSharp;
+using static WiringPiSharp.WiringPi;
 
 namespace Robotix.External
 {
@@ -17,13 +18,13 @@ namespace Robotix.External
         /// <summary>
         /// The direction of the pin
         /// </summary>
-        public readonly WiringPi.PinMode Direction;
+        public readonly PinMode Direction;
 
         /// <summary>
         /// The pin communicating with the memory
         /// Change to enum later
         /// </summary>
-        public readonly WiringPi.WPiPinout PhysicalPin;
+        public readonly WPiPinout PhysicalPin;
 
         /// <summary>
         /// The current state of the item
@@ -39,18 +40,19 @@ namespace Robotix.External
         /// <summary>
         /// Containing a keystate
         /// </summary>
-        public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue) : this(pin, direction, initialValue, null, WiringPi.PullMode.Off) { }
+        public DigitalPin(WPiPinout pin, PinMode direction, bool initialValue) : this(pin, direction, initialValue, null, PullMode.Off) { }
         /// <summary>
         /// Containing a keystate
         /// </summary>
-        public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue, string friendlyName, WiringPi.PullMode resistor)
+        public DigitalPin(WPiPinout pin, PinMode direction, bool initialValue, string friendlyName, PullMode resistor)
         {
             PhysicalPin = pin;
             FriendlyName = friendlyName;
             InitialValue = initialValue;
             Direction = direction;
             GPIO.PinMode(pin, direction);
-            if (direction == WiringPi.PinMode.Input)
+
+            if (direction == PinMode.Input)
             {
                 GPIO.PullUpDnControl(pin, resistor);
             }
@@ -82,7 +84,7 @@ namespace Robotix.External
         {
             if (!PollingAvalible)
             {
-                if (Direction == WiringPi.PinMode.Input)
+                if (Direction == PinMode.Input)
                 {
                     return GPIO.DigitalReading(PhysicalPin);
                 }
@@ -110,7 +112,7 @@ namespace Robotix.External
         /// <param name="value">Value to write</param>
         public void Write(bool value)
         {
-            if (Direction == WiringPi.PinMode.Output)
+            if (Direction == PinMode.Output)
             {
                 GPIO.DigitalWrite(PhysicalPin, value);
                 CurrentState = value;
@@ -126,8 +128,14 @@ namespace Robotix.External
         /// <returns></returns>
         public bool JustChangedTo(bool value)
         {
-            if (value == CurrentState && JustChanged == true) { return true; }
-            else { return false; }
+            if (value == CurrentState && JustChanged == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -137,7 +145,7 @@ namespace Robotix.External
         {
             try
             {
-                if (Direction == WiringPi.PinMode.Output)
+                if (Direction == PinMode.Output)
                 {
                     Write(false);
                 }
