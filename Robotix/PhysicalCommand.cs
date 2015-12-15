@@ -63,9 +63,16 @@ namespace Robotix
         /// </summary>
         protected virtual void Initiate()
         {
-            Setup.WiringPiPiSetup();
-            Add<DigitalPin>(new DigitalPin(WPiPinout.P0, PinMode.Output, true, "led1", PullMode.Off));
+            try
+            {
+                Setup.WiringPiPiSetup();
+            }
+            catch (Exception e)
+            {
+                
+            }
         }
+
 
         /// <summary>
         /// The main method for the robots logic
