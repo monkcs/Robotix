@@ -36,7 +36,7 @@ namespace Robotix
         List<object> CurrentValueObject = new List<object>();
 
         /// <summary>
-        /// List of Pin's and that are initiated
+        /// List of Pin's that are initiated
         /// </summary>
         List<DigitalPin> AvaliblePin = new List<DigitalPin>();
 
@@ -85,6 +85,7 @@ namespace Robotix
 
             }
             //*/
+            GetPin<DigitalPin>("test").Read
 
         }
 

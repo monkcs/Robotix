@@ -64,7 +64,7 @@ namespace Robotix.External
         public bool PollingUpdate()
         {
             bool temp = CurrentState;
-           // CurrentState = GPIO.DigitalReading(PhysicalPin);
+            CurrentState = GPIO.DigitalReading(PhysicalPin);
             if (CurrentState != temp)
             {
                 JustChanged = true;
@@ -77,7 +77,7 @@ namespace Robotix.External
         }
 
         /// <summary>
-        /// Returns the value of the pin. True for high
+        /// Returns the value of the pin. True for high. If the pin are polled, the value will be the cached state
         /// </summary>
         /// <returns></returns>
         public bool Read()
@@ -90,7 +90,7 @@ namespace Robotix.External
                 }
                 else
                 {
-                    return false;
+                    return CurrentState;
                 }
             }
             else
