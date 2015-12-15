@@ -73,20 +73,18 @@ namespace Robotix
         /// </summary>
         protected virtual void Update()
         {
+            #region Example code
             /*
             if (GetKeyJustChanged(ConsoleKey.A, true))
             {
-                //  GetPin<SoftwarePWM>("led2").Start();
+                GetPin<SoftwarePWM>("led2").Start();
             }
             if (GetKeyJustChanged(ConsoleKey.S, true))
             {
                 GetPin<DigitalPin>("led1").Write(true);
-                
-
             }
             //*/
-            
-
+            #endregion
         }
 
         #region Background Thread
@@ -302,7 +300,10 @@ namespace Robotix
             // Disposes all pins
             foreach (DigitalPin item in AvaliblePin)
             {
-                item.Dispose();
+                if (item != null)
+                {
+                    item.Dispose();
+                }
             }
         }
     }
