@@ -24,6 +24,7 @@ namespace Robotix.External
         /// Change to enum later
         /// </summary>
         public readonly WiringPi.WPiPinout PhysicalPin;
+
         /// <summary>
         /// The current state of the item
         /// </summary>
@@ -72,6 +73,7 @@ namespace Robotix.External
             }
             return JustChanged;
         }
+
         /// <summary>
         /// Returns the value of the pin. True for high
         /// </summary>
@@ -127,12 +129,12 @@ namespace Robotix.External
             if (value == CurrentState && JustChanged == true) { return true; }
             else { return false; }
         }
+
         /// <summary>
         /// Disposes all resources
         /// </summary>
         public void Dispose()
         {
-            
             try
             {
                 if (Direction == WiringPi.PinMode.Output)
