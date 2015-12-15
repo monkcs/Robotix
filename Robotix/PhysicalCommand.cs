@@ -64,7 +64,7 @@ namespace Robotix
         protected virtual void Initiate()
         {
             Setup.WiringPiPiSetup();
-            AvaliblePin.Add(new DigitalPin(WPiPinout.P0, PinMode.Output, true, "led1", PullMode.Off));
+            Add<DigitalPin>(new DigitalPin(WPiPinout.P0, PinMode.Output, true, "led1", PullMode.Off));
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Robotix
 
             }
             //*/
-            GetPin<DigitalPin>("test").Read
+            
 
         }
 
@@ -181,11 +181,21 @@ namespace Robotix
 
         #region Add / remove pins from AvalibleList
         /// <summary>
-        /// Add a pin to the avalible list. Pin can't be polled if not added to this list. Will dispose and replace existing pin.
+        /// Add a pin to the avalible list. Pin can't be polled if not added to this list. Will dispose and replace existing pin. Will set PollingAvalible to true
         /// </summary>
         /// <param name="pinToAdd">Pin to add</param>
         protected void Add<T>(T pinToAdd) where T : DigitalPin
         {
+            Add<T>(pinToAdd, true);
+        }
+        /// <summary>
+        /// Add a pin to the avalible list. Pin can't be polled if not added to this list. Will dispose and replace existing pin.
+        /// </summary>
+        /// <param name="pinToAdd">Pin to add</param>
+        /// <param name="pollingAvalible">True if the pin should be avalible for polling</param>
+        protected void Add<T>(T pinToAdd, bool pollingAvalible) where T : DigitalPin
+        {
+            pinToAdd.PollingAvalible = pollingAvalible;
             int index = AvaliblePin.FindIndex(item2 => item2.PhysicalPin == pinToAdd.PhysicalPin);
             if (index != -1)
             {
