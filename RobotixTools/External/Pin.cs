@@ -120,7 +120,7 @@ namespace Robotix.External
             }
         }
 
-
+        
         /// <summary>
         /// Checking if the pin has the specified value and just changed to that value. Returns <code>true</code> if a match is found. Will use cached data.
         /// </summary>
