@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using Robotix.External;
@@ -81,16 +81,7 @@ namespace Robotix
         protected virtual void Update()
         {
             #region Example code
-            /*
-            if (GetKeyJustChanged(ConsoleKey.A, true))
-            {
-                GetPin<SoftwarePWM>("led2").Start();
-            }
-            if (GetKeyJustChanged(ConsoleKey.S, true))
-            {
-                GetPin<DigitalPin>("led1").Write(true);
-            }
-            //*/
+
             #endregion
         }
 
