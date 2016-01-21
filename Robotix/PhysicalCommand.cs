@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading;
 using Robotix.External;
 using WiringPiSharp;
-using static WiringPiSharp.WiringPi;
 
 namespace Robotix
 {
@@ -69,7 +68,7 @@ namespace Robotix
             }
             catch (Exception e)
             {
-                
+				
             }
         }
 
@@ -258,7 +257,7 @@ namespace Robotix
         /// <typeparam name="T">Pin or derived type of pin</typeparam>
         /// <param name="pin">Pin of the object</param>
         /// <returns></returns>
-        protected T GetPin<T>(WPiPinout pin) where T : DigitalPin
+        protected T GetPin<T>(WiringPi.WPiPinout pin) where T : DigitalPin
         {
             try
             {

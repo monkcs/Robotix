@@ -9,7 +9,7 @@ namespace Robotix.External
     /// Containing a keystate, when passed to a class attached to IPhysicalCommandCommunication, it will act according to instructions for that key.
     /// </summary>
     [Serializable]
-    public class Key : GpioItem, ISerializable
+    public class Key : GpioItem
     {
         /// <summary>
         /// The current key
@@ -24,27 +24,5 @@ namespace Robotix.External
         /// Containing a keystate, when passed to a class attached to IPhysicalCommandCommunication, it will act according to instructions for that key.
         /// </summary>
         public Key() { }
-        public Key(SerializationInfo info, StreamingContext ctxt)
-        {
-            SerializationReader sr = SerializationReader.GetReader(info);
-            FriendlyName = sr.ReadString();
-            JustChanged = sr.ReadBoolean();
-
-            CurrentKey = (ConsoleKey)sr.ReadInt32();
-            CurrentState = sr.ReadBoolean();
-
-        }
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            SerializationWriter sw = SerializationWriter.GetWriter();
-
-            sw.Write(FriendlyName);
-            sw.Write(JustChanged);
-
-            sw.Write((int)CurrentKey);
-            sw.Write(CurrentState);
-
-            sw.AddToInfo(info);
-        }
     }
 }

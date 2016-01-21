@@ -8,8 +8,8 @@ namespace Robotix.External
     /// Baseclass for I/O objects like keys and pins
     /// </summary>
     [Serializable]
-    public abstract class GpioItem : ISerializable
-    {
+    public abstract class GpioItem
+	{
         [NonSerialized]
         private string _friendlyName = "";
         /// <summary>
@@ -49,25 +49,6 @@ namespace Robotix.External
         public GpioItem()
         {
 
-        }
-        /// <summary>
-        /// Baseclass for I/O objects like keys and pins
-        /// </summary>
-        public GpioItem(SerializationInfo info, StreamingContext ctxt)
-        {
-            SerializationReader sr = SerializationReader.GetReader(info);
-            _friendlyName = sr.ReadString();
-            JustChanged = sr.ReadBoolean();
-        }
-
-        public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            SerializationWriter sw = SerializationWriter.GetWriter();
-
-            sw.Write(_friendlyName);
-            sw.Write(JustChanged);
-
-            sw.AddToInfo(info);
         }
     }
 }

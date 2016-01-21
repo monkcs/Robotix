@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RobotixTools</name>
+    </assembly>
+    <members>
+        <member name="T:Robotix.CommunicationCodes">
+            <summary>
+            Will be used to match derived GpioItem for serialization, and for control codes for the server connection
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCAllGood">
+            <summary>
+            Message that all is good
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCFatalError">
+            <summary>
+            Message that a fatal error has occurred
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCMessageFromRobotix">
+            <summary>
+            That the data containing a RobotixMessage
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCRequestingRebootRobotix">
+            <summary>
+            Message that a fatal error occurred in Robotix, and that the runtime will restart robotix in 60 seconds, if not the user return 'false'
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCRequestingRebootProgram">
+            <summary>
+            Message that a fatal error occurred in Robotix, and that the runtime will restart itselves in 60 seconds, if not the user return 'false'
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCRequestingRebootMachine">
+            <summary>
+            Message that a fatal error occurred in Robotix, and that the runtime will restart the machine in 60 seconds, if not the user return 'false'
+            </summary></member>
+        <member name="F:Robotix.CommunicationCodes.CCStopNetworkCommunication">
+            <summary>
+            Message that the runtime immediately should stop network communication and start automatic control program
+            </summary></member>
+        <member name="T:Robotix.External.GpioItem">
+            <summary>
+            Baseclass for I/O objects like keys and pins
+            </summary></member>
+        <member name="P:Robotix.External.GpioItem.FriendlyName">
+            <summary>
+            A friendly name for easy remembering of item
+            </summary></member>
+        <member name="P:Robotix.External.GpioItem.JustChanged">
+            <summary>
+            Holding value if the state of the item just changed
+            </summary></member>
+        <member name="M:Robotix.External.GpioItem.#ctor">
+            <summary>
+            Baseclass for I/O objects like keys and pins
+            </summary></member>
+        <member name="T:Robotix.External.Key">
+            <summary>
+            Containing a keystate, when passed to a class attached to IPhysicalCommandCommunication, it will act according to instructions for that key.
+            </summary></member>
+        <member name="P:Robotix.External.Key.CurrentKey">
+            <summary>
+            The current key
+            </summary></member>
+        <member name="P:Robotix.External.Key.CurrentState">
+            <summary>
+            The current state of the item. Ture for Active value
+            </summary></member>
+        <member name="M:Robotix.External.Key.#ctor">
+            <summary>
+            Containing a keystate, when passed to a class attached to IPhysicalCommandCommunication, it will act according to instructions for that key.
+            </summary></member>
+        <member name="T:Robotix.External.DigitalPin">
+            <summary>
+            Containing a pinstate, when passed to a class attached to IPhysicalCommandCommunication
+            will apply to a physical GPIO pin.
+            </summary></member>
+        <member name="F:Robotix.External.DigitalPin.InitialValue">
+            <summary>
+            The initial value for the pin
+            </summary></member>
+        <member name="F:Robotix.External.DigitalPin.Direction">
+            <summary>
+            The direction of the pin
+            </summary></member>
+        <member name="F:Robotix.External.DigitalPin.PhysicalPin">
+            <summary>
+            The pin communicating with the memory
+            Change to enum later
+            </summary></member>
+        <member name="P:Robotix.External.DigitalPin.CurrentState">
+            <summary>
+            The current state of the item
+            </summary></member>
+        <member name="P:Robotix.External.DigitalPin.PollingAvalible">
+            <summary>
+            True if the runtime should poll the pin for changes. Pin have to be added to the polling engine.
+            If turned off you will not get a indication if the pin "just changed" to a state
+            </summary></member>
+        <member name="M:Robotix.External.DigitalPin.#ctor(WiringPiSharp.WiringPi.WPiPinout,WiringPiSharp.WiringPi.PinMode,System.Boolean)">
+            <summary>
+            Containing a keystate
+            </summary></member>
+        <member name="M:Robotix.External.DigitalPin.#ctor(WiringPiSharp.WiringPi.WPiPinout,WiringPiSharp.WiringPi.PinMode,System.Boolean,System.String,WiringPiSharp.WiringPi.PullMode)">
+            <summary>
+            Containing a keystate
+            </summary></member>
+        <member name="M:Robotix.External.DigitalPin.PollingUpdate">
+            <summary>
+            Update the current value for the pin, used by the polling functions. Returns true if value changed from last scan
+            </summary></member>
+        <member name="M:Robotix.External.DigitalPin.Read">
+            <summary>
+            Returns the value of the pin. True for high. If the pin are polled, the value will be the cached state
+            </summary>
+            <returns></returns></member>
+        <member name="M:Robotix.External.DigitalPin.Write">
+            <summary>
+            Toggles the value for the pin
+            </summary></member>
+        <member name="M:Robotix.External.DigitalPin.Write(System.Boolean)">
+            <summary>
+            Writes the value high or low to the pin. True for high
+            </summary>
+            <param name="value">Value to write</param></member>
+        <member name="M:Robotix.External.DigitalPin.JustChangedTo(System.Boolean)">
+            <summary>
+            Checking if the pin has the specified value and just changed to that value. Returns <code>true</code> if a match is found. Will use cached data.
+            </summary>
+            <param name="value">The value of the pin. True for high</param>
+            <returns></returns></member>
+        <member name="M:Robotix.External.DigitalPin.Dispose">
+            <summary>
+            Disposes all resources
+            </summary></member>
+        <member name="T:Robotix.SerializeXML">
+            <summary>
+            Containing static methods for serialize object
+            </summary></member>
+        <member name="M:Robotix.SerializeXML.SerializeToFile``1(``0,System.String)">
+            <summary>
+            Serialize a object of type T to xml
+            </summary>
+            <typeparam name="T">Class with parameter-free constructor</typeparam>
+            <param name="objectToSerialize">A object to serialize</param>
+            <param name="xmlfile">Url to file were the xml will be saved</param></member>
+        <member name="M:Robotix.SerializeXML.DeserializeFromFile``1(System.String)">
+            <summary>
+            Deserialize a xml file to object of type T
+            </summary>
+            <typeparam name="T">Class with parameter-free constructor</typeparam>
+            <param name="xmlfile">Url to file were the xml are saved</param>
+            <returns>Object of type T</returns></member>
+        <member name="M:Robotix.SerializeXML.Deserialize``1(System.String)">
+            <summary>
+            Deserialize a object of type T to xml
+            </summary>
+            <typeparam name="T">Class with parameter-free constructor</typeparam>
+            <param name="toDeserialize">A object to deserialize</param>
+            <returns></returns></member>
+        <member name="M:Robotix.SerializeXML.Serialize``1(``0)">
+            <summary>
+            Serialize a object of type T to xml
+            </summary>
+            <typeparam name="T">Class with parameter-free constructor</typeparam>
+            <param name="toSerialize">A object to serialize</param>
+            <returns></returns></member>
+    </members>
+</doc>

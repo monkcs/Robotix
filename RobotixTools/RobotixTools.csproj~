@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA72003D-5FFB-4ABD-9246-CA6CC82C087F}</ProjectGuid>
+    <ProjectGuid>{BA72003D-5FFB-4ABD-9246-CA6CC82C087B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Robotix</RootNamespace>
     <AssemblyName>RobotixTools</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -40,9 +40,6 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Serialization" />
     <Reference Include="System.Xml" />
-    <Reference Include="WiringPiSharp">
-      <HintPath>..\..\WiringPiSharp\WiringPiSharp\bin\Release\WiringPiSharp.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommunicationCodes.cs" />

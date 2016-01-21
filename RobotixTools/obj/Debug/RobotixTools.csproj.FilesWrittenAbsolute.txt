@@ -1,0 +1,7 @@
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/bin/Debug/RobotixTools.dll.mdb
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/bin/Debug/RobotixTools.dll
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/obj/Debug/RobotixTools.dll
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/obj/Debug/RobotixTools.dll.mdb
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/bin/Debug/FastSerialization.dll
+/home/charlie/Tamp/Projekt/Egna projekt/Mjukvara/Raspberry Pi/Robotix/Robotix/RobotixTools/bin/Debug/WiringPiSharp.dll

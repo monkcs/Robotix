@@ -1,7 +1,6 @@
 using System;
 using WiringPiSharp;
-//using static WiringPiSharp.WiringPi;
-using WiringPiSharp;
+using static WiringPiSharp.WiringPi;
 
 namespace Robotix.External
 {
@@ -41,7 +40,7 @@ namespace Robotix.External
         /// <summary>
         /// Containing a keystate
         /// </summary>
-        public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue) : this(pin, direction, initialValue, null, PullMode.Off) { }
+        public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue) : this(pin, direction, initialValue, null, WiringPi.PullMode.Off) { }
         /// <summary>
         /// Containing a keystate
         /// </summary>
@@ -51,9 +50,9 @@ namespace Robotix.External
             FriendlyName = friendlyName;
             InitialValue = initialValue;
             Direction = direction;
-            WiringPi.GPIO.PinMode(pin, direction);
+            GPIO.PinMode(pin, direction);
 
-            if (direction == PinMode.Input)
+            if (direction == WiringPi.PinMode.Input)
             {
                 GPIO.PullUpDnControl(pin, resistor);
             }
