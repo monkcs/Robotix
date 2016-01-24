@@ -43,7 +43,7 @@ namespace Robotix.External
 		/// <param name="initialValue">The initial value for the pin</param>
         public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue) : this(pin, direction, initialValue, null, WiringPi.PullMode.Off) { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Robotix.External.DigitalPin"/> class.
+		/// Containing a keystate
         /// </summary>
 		/// <param name="pin">The pin communicating with the memory</param>
 		/// <param name="direction">The direction of the pin</param>
@@ -61,6 +61,10 @@ namespace Robotix.External
             {
                 GPIO.PullUpDnControl(pin, resistor);
             }
+			if (direction != WiringPi.PinMode.Input || direction != WiringPi.PinMode.Output)
+			{
+				throw new ArgumentException ("Use derived class for specified pinmode");
+			}
         }
 
         /// <summary>
