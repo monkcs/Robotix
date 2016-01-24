@@ -51,12 +51,6 @@ namespace Robotix.External
         /// <param name="friendlyName">A friendly name for the pin</param>
         public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue, string friendlyName, WiringPi.PullMode resistor)
         {
-            PhysicalPin = pin;
-            FriendlyName = friendlyName;
-            InitialValue = initialValue;
-            Direction = direction;
-            GPIO.PinMode(pin, direction);
-
             if (direction == WiringPi.PinMode.Input)
             {
                 GPIO.PullUpDnControl(pin, resistor);
@@ -66,6 +60,21 @@ namespace Robotix.External
 				throw new ArgumentException ("Use derived class for specified pinmode");
 			}
         }
+		/// <summary>
+		/// Setup all properties
+		/// </summary>
+		/// <param name="pin">The pin communicating with the memory</param>
+		/// <param name="direction">The direction of the pin</param>
+		/// <param name="initialValue">The initial value for the pin</param>
+		/// <param name="friendlyName">A friendly name for the pin</param>
+		protected void SetupProperties(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue, string friendlyName)
+		{
+			PhysicalPin = pin;
+			FriendlyName = friendlyName;
+			InitialValue = initialValue;
+			Direction = direction;
+			GPIO.PinMode(pin, direction);
+		}
 
         /// <summary>
         /// Update the current value for the pin, used by the polling functions. Returns true if value changed from last scan
