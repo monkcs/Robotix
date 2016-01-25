@@ -55,10 +55,6 @@ namespace Robotix.External
             {
                 GPIO.PullUpDnControl(pin, resistor);
             }
-			if (direction != WiringPi.PinMode.Input || direction != WiringPi.PinMode.Output)
-			{
-				throw new ArgumentException ("Use derived class for specified pinmode");
-			}
         }
 		/// <summary>
 		/// Setup all properties
@@ -163,7 +159,7 @@ namespace Robotix.External
         {
             try
             {
-                if (Direction == PinMode.Output)
+                if (Direction == WiringPi.PinMode.Output)
                 {
                     Write(false);
                 }
