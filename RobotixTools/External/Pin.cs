@@ -159,7 +159,7 @@ namespace Robotix.External
         /// <summary>
         /// Disposes all resources
         /// </summary>
-        public void Dispose()
+        public virtual void Dispose()
         {
             try
             {
