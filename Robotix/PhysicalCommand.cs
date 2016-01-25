@@ -80,7 +80,7 @@ namespace Robotix
         protected virtual void Update()
         {
             #region Example code
-
+			GetPin<PwmPin>("test");
             #endregion
         }
 
@@ -196,7 +196,7 @@ namespace Robotix
             {
                 try
                 {
-                    if (AvaliblePin[index].Direction == PinMode.Output)
+                    if (AvaliblePin[index].Direction == WiringPi.PinMode.Output)
                     {
                         AvaliblePin[index].Write(false);
                     }
