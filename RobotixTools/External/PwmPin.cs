@@ -34,6 +34,31 @@ namespace Robotix.External
 		}
 
 		/// <summary>
+		/// Update the current value for the pin, used by the polling functions. Returns true if value changed from last scan
+		/// </summary>
+		public override bool PollingUpdate()
+		{
+			return JustChanged;
+		}
+
+		/// <summary>
+		/// Returns the value of the pin. True for high. If the pin are polled, the value will be the cached state
+		/// </summary>
+		/// <returns></returns>
+		public override bool Read()
+		{
+			return CurrentState;
+		}
+		/// <summary>
+		/// Returns the pwm value of the pin
+		/// </summary>
+		/// <returns></returns>
+		public virtual int ReadPwm()
+		{
+			return PwmValue;
+		}
+
+		/// <summary>
 		/// Toggles the value for the pin between specified pwm value and off
 		/// </summary>
 		public override void Write()
