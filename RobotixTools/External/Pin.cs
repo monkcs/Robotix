@@ -106,7 +106,7 @@ namespace Robotix.External
         /// <summary>
         /// Toggles the value for the pin
         /// </summary>
-        public void Write()
+        public virtual void Write()
         {
             Write(!CurrentState);
         }
@@ -114,7 +114,7 @@ namespace Robotix.External
         /// Writes the value high or low to the pin. True for high
         /// </summary>
         /// <param name="value">Value to write</param>
-        public void Write(bool value)
+        public virtual void Write(bool value)
 		{
 			if (Direction == WiringPi.PinMode.Output)
 			{
