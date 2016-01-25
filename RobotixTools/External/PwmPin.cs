@@ -16,11 +16,17 @@ namespace Robotix.External
 		/// <param name="value"></param>
 		/// <param name="range"></param>
 		/// <param name="friendlyName">A friendly name for the pin</param> 
-		public PwmPin (WiringPi.WPiPinout pin, int value, int range, string friendlyName)
+		public PwmPin (WiringPi.WPiPinout pin, int value, int range) : this(pin,value,range,null) {}
+		/// <summary>
+		/// Containing a pinstate for PWM pin
+		/// </summary>
+		/// <param name="pin">The pin communicating with the memory</param>
+		/// <param name="value"></param>
+		/// <param name="range"></param>
+		/// <param name="friendlyName">A friendly name for the pin</param> 
+		public PwmPin (WiringPi.WPiPinout pin, int value, int range, string friendlyName) : base(pin,WiringPi.PinMode.PwmOutput,false,friendlyName,WiringPi.PullMode.Off)
 		{
-			base.SetupProperties (pin, WiringPi.PinMode.PwmOutput, false, friendlyName);
 			WiringPiSharp.SoftPwm.SoftPwmCreate (pin, value, range);
 		}
 	}
 }
-
