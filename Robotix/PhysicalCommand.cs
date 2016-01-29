@@ -80,7 +80,7 @@ namespace Robotix
         protected virtual void Update()
         {
             #region Example code
-			GetPin<PwmPin>("test");
+
             #endregion
         }
 
