@@ -18,7 +18,7 @@ namespace Robotix
 			TypeOfObject = typeOfObject;
 			ValueObject = valueObject;
 		}
-		enum MessageType
+		public enum MessageType
 		{
 			/// <summary>
 			/// Information to show in the console
