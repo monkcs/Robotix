@@ -11,10 +11,14 @@ namespace Robotix
     /// </summary>
     public class PhysicalCommand : IDisposable
     {
+		/// <summary>
+		/// The delegate for event when an state change in the physival command and robotix invoke the StateChanged event
+		/// </summary>
+		public delegate void PhysicalMessageEventHandler(object sender, PhysicalCommandMessage e);
         /// <summary>
         /// State changed in communication with physical equipment
         /// </summary>
-        public event EventHandler StateChanged;
+		public event PhysicalMessageEventHandler StateChanged;
 
         /// <summary>
         /// Cache holding just arrived data
