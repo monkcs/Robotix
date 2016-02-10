@@ -124,7 +124,7 @@ namespace Robotix
 					{
 						object temp = Exceptions;
 						if (temp != null)
-							Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, false));
+							Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, true));
 					}
                 });
             Runner.IsBackground = true;
@@ -288,7 +288,6 @@ namespace Robotix
 		{
 			try 
 			{
-				throw new Exception();
 				T temp = (T)AvaliblePin.Find (element => element.PhysicalPin == pin);
 				if (temp != null)
 				{
@@ -301,7 +300,6 @@ namespace Robotix
 			}
 			catch
 			{
-				Console.Write ("--ERROR");
 				object temp = Exceptions;
 				if (temp != null)
 					Exceptions.Invoke (this,
@@ -320,7 +318,6 @@ namespace Robotix
         {
 			try 
 			{
-				throw new Exception();
 				T temp = (T)AvaliblePin.Find(element => element.FriendlyName == friendlyName);
 				if (temp != null)
 				{
@@ -333,7 +330,6 @@ namespace Robotix
 			}
 			catch
 			{
-				Console.Write ("--ERROR");
 				object temp = Exceptions;
 				if (temp != null)
 					Exceptions.Invoke (this,
