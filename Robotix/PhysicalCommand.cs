@@ -321,6 +321,7 @@ namespace Robotix
 						new UnhandledExceptionEventArgs (
 							new InvalidCastException ("Not possible to find specified pin \"" + friendlyName + "\""),
 							false));
+				return null;
             }
         }
         #endregion
