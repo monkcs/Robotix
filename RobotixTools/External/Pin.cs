@@ -33,7 +33,7 @@ namespace Robotix.External
         /// True if the runtime should poll the pin for changes. Pin have to be added to the polling engine.
         /// If turned off you will not get a indication if the pin "just changed" to a state
         /// </summary>
-        public bool PollingAvalible { get; set; } = false;
+        public bool PollingAvalible { get; set; }
 
 		/// <summary>
 		/// Containing a keystate

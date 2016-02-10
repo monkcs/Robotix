@@ -14,7 +14,7 @@ namespace Robotix
 		/// <summary>
 		/// The delegate for event when an state change in the physival command and robotix invoke the StateChanged event
 		/// </summary>
-		public delegate void PhysicalMessageEventHandler(object sender, PhysicalCommandMessage e);
+		public delegate void PhysicalMessageEventHandler(object sender, object e);
         /// <summary>
         /// State changed in communication with physical equipment
         /// </summary>

@@ -8,8 +8,16 @@ namespace Robotix.External
 	/// </summary>
 	public class PwmPin : DigitalPin, IDisposable
 	{
-		public int PwmValue { get; protected set; } = 0;
-		public int PwmRange { get; protected set; } = 0;
+		/// <summary>
+		/// Gets or sets the pwm value
+		/// </summary>
+		/// <value></value>
+		public int PwmValue { get; protected set; }
+		/// <summary>
+		/// Gets or sets the pwm range
+		/// </summary>
+		/// <value></value>
+		public int PwmRange { get; protected set; }
 
 		/// <summary>
 		/// Containing a pinstate for PWM pin
@@ -30,7 +38,6 @@ namespace Robotix.External
 			PwmValue = value;
 			PwmRange = range;
 			WiringPiSharp.SoftPwm.SoftPwmCreate (pin, value, range);
-			base.JustChangedTo
 		}
 
 		/// <summary>

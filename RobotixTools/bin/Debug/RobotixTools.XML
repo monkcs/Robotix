@@ -84,7 +84,6 @@
         <member name="F:Robotix.External.DigitalPin.PhysicalPin">
             <summary>
             The pin communicating with the memory
-            Change to enum later
             </summary></member>
         <member name="P:Robotix.External.DigitalPin.CurrentState">
             <summary>
@@ -95,14 +94,14 @@
             True if the runtime should poll the pin for changes. Pin have to be added to the polling engine.
             If turned off you will not get a indication if the pin "just changed" to a state
             </summary></member>
-        <member name="M:Robotix.External.DigitalPin.#ctor(WiringPiSharp.WiringPi.WPiPinout,WiringPiSharp.WiringPi.PinMode,System.Boolean)">
-            <summary>
-            Containing a keystate
-            </summary></member>
         <member name="M:Robotix.External.DigitalPin.#ctor(WiringPiSharp.WiringPi.WPiPinout,WiringPiSharp.WiringPi.PinMode,System.Boolean,System.String,WiringPiSharp.WiringPi.PullMode)">
             <summary>
             Containing a keystate
-            </summary></member>
+            </summary>
+            <param name="pin">The pin communicating with the memory</param>
+            <param name="direction">The direction of the pin</param>
+            <param name="initialValue">The initial value for the pin</param>
+            <param name="friendlyName">A friendly name for the pin</param></member>
         <member name="M:Robotix.External.DigitalPin.PollingUpdate">
             <summary>
             Update the current value for the pin, used by the polling functions. Returns true if value changed from last scan
@@ -163,5 +162,70 @@
             <typeparam name="T">Class with parameter-free constructor</typeparam>
             <param name="toSerialize">A object to serialize</param>
             <returns></returns></member>
+        <member name="T:Robotix.External.PwmPin">
+            <summary>
+            Containing a pinstate for a pwm pin
+            </summary></member>
+        <member name="P:Robotix.External.PwmPin.PwmValue">
+            <summary>
+            Gets or sets the pwm value
+            </summary>
+            <value></value></member>
+        <member name="P:Robotix.External.PwmPin.PwmRange">
+            <summary>
+            Gets or sets the pwm range
+            </summary>
+            <value></value></member>
+        <member name="M:Robotix.External.PwmPin.#ctor(WiringPiSharp.WiringPi.WPiPinout,System.Int32,System.Int32)">
+            <summary>
+            Containing a pinstate for PWM pin
+            </summary>
+            <param name="pin">The pin communicating with the memory</param>
+            <param name="value"></param>
+            <param name="range"></param></member>
+        <member name="M:Robotix.External.PwmPin.#ctor(WiringPiSharp.WiringPi.WPiPinout,System.Int32,System.Int32,System.String)">
+            <summary>
+            Containing a pinstate for PWM pin
+            </summary>
+            <param name="pin">The pin communicating with the memory</param>
+            <param name="value"></param>
+            <param name="range"></param>
+            <param name="friendlyName">A friendly name for the pin</param></member>
+        <member name="M:Robotix.External.PwmPin.PollingUpdate">
+            <summary>
+            Update the current value for the pin, used by the polling functions. Returns true if value changed from last scan
+            </summary></member>
+        <member name="M:Robotix.External.PwmPin.Read">
+            <summary>
+            Returns the value of the pin. True for high. If the pin are polled, the value will be the cached state
+            </summary>
+            <returns></returns></member>
+        <member name="M:Robotix.External.PwmPin.ReadPwm">
+            <summary>
+            Returns the pwm value of the pin
+            </summary>
+            <returns></returns></member>
+        <member name="M:Robotix.External.PwmPin.Write">
+            <summary>
+            Toggles the value for the pin between specified pwm value and off
+            </summary></member>
+        <member name="M:Robotix.External.PwmPin.Write(System.Boolean)">
+            <summary>
+            Writes the value high or low to the pin. True for specified pwm value, false for off
+            </summary>
+            <param name="value">Value to write</param></member>
+        <member name="M:Robotix.External.PwmPin.Write(System.Int32)">
+            <summary>
+            Writes the specified pwm value to the pin
+            </summary>
+            <param name="pwmValue">Value to write</param></member>
+        <member name="F:Robotix.PhysicalCommandMessage.MessageType.Information">
+            <summary>
+            Information to show in the console
+            </summary></member>
+        <member name="F:Robotix.PhysicalCommandMessage.MessageType.RawData">
+            <summary>
+            Value from robotix object
+            </summary></member>
     </members>
 </doc>
