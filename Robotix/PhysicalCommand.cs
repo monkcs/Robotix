@@ -267,16 +267,21 @@ namespace Robotix
         /// <param name="pin">Pin of the object</param>
         /// <returns></returns>
         protected T GetPin<T>(WiringPi.WPiPinout pin) where T : DigitalPin
-        {
-            try
-            {
-                return (T)AvaliblePin.Find(element => element.PhysicalPin == pin);
-            }
-            catch
-            {
-                throw new InvalidCastException("Not possible to find object with specified pin");
-            }
-        }
+		{
+			try 
+			{
+				return (T)AvaliblePin.Find (element => element.PhysicalPin == pin);
+			}
+			catch
+			{
+				object temp = Exceptions;
+				if (temp != null)
+					Exceptions.Invoke (this,
+						new UnhandledExceptionEventArgs (
+							new InvalidCastException ("Not possible to find specified pin \"" + pin.ToString() + "\""),
+							false));
+			}
+		}
         /// <summary>
         /// Returns the refrence to an object in AvaliblePin list
         /// </summary>
@@ -291,7 +296,12 @@ namespace Robotix
             }
             catch
             {
-                throw new InvalidCastException("Not possible to find object with specified friendly name");
+				object temp = Exceptions;
+				if (temp != null)
+					Exceptions.Invoke (this,
+						new UnhandledExceptionEventArgs (
+							new InvalidCastException ("Not possible to find specified pin \"" + friendlyName + "\""),
+							false));
             }
         }
         #endregion
