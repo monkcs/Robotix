@@ -12,13 +12,18 @@ namespace Robotix
     public class PhysicalCommand : IDisposable
     {
 		/// <summary>
-		/// The delegate for event when an state change in the physival command and robotix invoke the StateChanged event
+		/// The delegate for event when an state change in the physival command
 		/// </summary>
-		public delegate void PhysicalMessageEventHandler(object sender, object e);
+		public delegate void RawDataEventHandler(object sender, GpioItem e);
+
         /// <summary>
         /// State changed in communication with physical equipment
         /// </summary>
-		public event PhysicalMessageEventHandler StateChanged;
+		public event RawDataEventHandler GpioStates;
+		/// <summary>
+		/// Exceptions from Robotix
+		/// </summary>
+		public event UnhandledExceptionEventHandler Exceptions;
 
         /// <summary>
         /// Cache holding just arrived data
@@ -72,7 +77,7 @@ namespace Robotix
             }
             catch (Exception e)
             {
-				
+
             }
         }
 
