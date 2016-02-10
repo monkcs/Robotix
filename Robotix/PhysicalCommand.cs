@@ -100,14 +100,32 @@ namespace Robotix
         public void Start()
         {
             IncomingKey = new List<Key>();
-            Initiate();
+			try
+			{
+				Initiate();
+			}
+			catch (Exception e)
+			{
+				object temp = Exceptions;
+				if (temp != null)
+					Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, false));
+			}
 
             Runner = new Thread(() =>
                 {
-                    while (true)
-                    {
-                        UpdateRunner();
-                    }
+					try
+					{
+                    	while (true)
+                    	{
+                        	UpdateRunner();
+						}
+					}
+					catch (Exception e)
+					{
+						object temp = Exceptions;
+						if (temp != null)
+							Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, false));
+					}
                 });
             Runner.IsBackground = true;
             Runner.Start();
@@ -278,8 +296,9 @@ namespace Robotix
 				if (temp != null)
 					Exceptions.Invoke (this,
 						new UnhandledExceptionEventArgs (
-							new InvalidCastException ("Not possible to find specified pin \"" + pin.ToString() + "\""),
+							new InvalidCastException ("Not possible to find pin \"" + pin.ToString() + "\""),
 							false));
+				return null;
 			}
 		}
         /// <summary>
