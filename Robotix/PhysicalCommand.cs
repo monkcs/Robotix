@@ -288,7 +288,8 @@ namespace Robotix
 		{
 			try 
 			{
-				return (T)AvaliblePin.Find (element => element.PhysicalPin == pin);
+				T temp = (T)AvaliblePin.Find (element => element.PhysicalPin == pin);
+				return temp;
 			}
 			catch
 			{
