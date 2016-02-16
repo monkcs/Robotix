@@ -92,7 +92,11 @@ namespace Robotix
             }
             catch (Exception e)
             {
-
+				object temp = Exceptions;
+				if (temp != null)
+				{
+					Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, false));
+				}
             }
         }
 
