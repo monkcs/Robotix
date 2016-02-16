@@ -25,6 +25,21 @@ namespace Robotix
 		/// </summary>
 		public event UnhandledExceptionEventHandler Exceptions;
 
+		/// <summary>
+		/// Gets a Boolean value indicating whether<see cref="Robotix.PhysicalCommand"/>working thread is running.
+		/// </summary>
+		/// <value><c>true</c> if thread running; otherwise, <c>false</c>.</value>
+		public bool ThreadRunning
+		{
+			get {
+				if (Runner != null) {
+					return Runner.IsAlive;
+				} else {
+					return false;
+				}
+			}
+		}
+
         /// <summary>
         /// Cache holding just arrived data
         /// </summary>
@@ -108,7 +123,7 @@ namespace Robotix
 			{
 				object temp = Exceptions;
 				if (temp != null)
-					Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, false));
+					Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, true));
 			}
 
             Runner = new Thread(() =>
@@ -124,7 +139,9 @@ namespace Robotix
 					{
 						object temp = Exceptions;
 						if (temp != null)
+						{
 							Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, true));
+						}
 					}
                 });
             Runner.IsBackground = true;
@@ -135,7 +152,11 @@ namespace Robotix
         /// </summary>
         public void Stop()
         {
-            Runner.Abort();
+			try 
+			{
+            	Runner.Abort();
+			} 
+			catch { }
         }
 
         /// <summary>
@@ -344,17 +365,20 @@ namespace Robotix
         /// Dispose all resources
         /// </summary>
         public void Dispose()
-        {
-            Stop();
+		{
+			Stop ();
 
-            // Disposes all pins
-            foreach (DigitalPin item in AvaliblePin)
-            {
-                if (item != null)
-                {
-                    item.Dispose();
-                }
-            }
-        }
+			try
+			{
+				// Disposes all pins
+				foreach (DigitalPin item in AvaliblePin) {
+					if (item != null) {
+						item.Dispose ();
+					}
+				}
+			}
+			catch {
+			}
+		}
     }
 }
