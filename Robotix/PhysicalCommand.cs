@@ -311,25 +311,17 @@ namespace Robotix
         /// <returns></returns>
         protected T GetPin<T>(WiringPi.WPiPinout pin) where T : DigitalPin
 		{
-			try 
-			{
-				T temp = (T)AvaliblePin.Find (element => element.PhysicalPin == pin);
-				if (temp != null)
-				{
-					return temp;
-				}
-				else 
-				{
-					throw new Exception();
-				}
-			}
-			catch
-			{
-				object temp = Exceptions;
-				if (temp != null)
+			T temp = (T)AvaliblePin.Find (element => element.PhysicalPin == pin);
+			if (temp != null) {
+				return temp;
+			} else {
+
+				object tempException = Exceptions;
+				if (tempException != null) {
 					Exceptions.Invoke (this,
 						new UnhandledExceptionEventArgs (
-							new Exception ("Not possible to find pin \"" + pin.ToString() + "\""), false));
+							new Exception ("Not possible to find pin \"" + pin.ToString () + "\""), false));
+				}
 				return null;
 			}
 		}
