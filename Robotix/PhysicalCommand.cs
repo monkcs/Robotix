@@ -21,9 +21,30 @@ namespace Robotix
         /// </summary>
 		public event RawDataEventHandler GpioStates;
 		/// <summary>
+		/// Use this method to invoke GpioStates event from derived class
+		/// </summary>
+		protected void OnGpioStatesChanged(GpioItem eventArgs)
+		{
+			RawDataEventHandler handler = GpioStates;
+			if (handler != null) {
+				handler (this, eventArgs);
+			}
+		}
+
+		/// <summary>
 		/// Exceptions from Robotix
 		/// </summary>
 		public event UnhandledExceptionEventHandler Exceptions;
+		/// <summary>
+		/// Use this method to invoke Exceptions event from derived class
+		/// </summary>
+		protected void OnExceptionsRaised(UnhandledExceptionEventArgs eventArgs)
+		{
+			UnhandledExceptionEventHandler handler = Exceptions;
+			if (handler != null) {
+				handler (this, eventArgs);
+			}
+		}
 
 		/// <summary>
 		/// Gets a Boolean value indicating whether<see cref="Robotix.PhysicalCommand"/>working thread is running.
@@ -77,9 +98,9 @@ namespace Robotix
         /// Class control for the GPIO pin 
         /// </summary>
         public PhysicalCommand()
-        {
+		{
 
-        }
+		}
 
         /// <summary>
         /// Will initiate all pins. Place all your pin configuration here.
