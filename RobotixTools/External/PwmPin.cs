@@ -98,6 +98,7 @@ namespace Robotix.External
 		public virtual void Write(int pwmValue)
 		{
 			SoftPwm.SoftPwmWrite (PhysicalPin, pwmValue);
+			PwmValue = pwmValue;
 			CurrentState = true;
 			JustChanged = true;
 		}
