@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Cache.cs" />
     <Compile Include="PhysicalCommand.cs" />
+    <Compile Include="External\GpioItem.cs" />
+    <Compile Include="External\Key.cs" />
+    <Compile Include="External\Pin.cs" />
+    <Compile Include="External\PwmPin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -53,10 +57,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <ProjectReference Include="..\RobotixTools\RobotixTools.csproj">
-      <Project>{BA72003D-5FFB-4ABD-9246-CA6CC82C087F}</Project>
-      <Name>RobotixTools</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
