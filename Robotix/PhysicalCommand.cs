@@ -65,19 +65,11 @@ namespace Robotix
         /// Cache holding just arrived data
         /// </summary>
         Cache<Key> IncomingKeyCache = new Cache<Key>();
-        /// <summary>
-        /// Cache holding just arrived data
-        /// </summary>
-        Cache<object> IncomingObjectCache = new Cache<object>();
 
         /// <summary>
         /// Data that are stored untill a new state arrive
         /// </summary>
         List<Key> CurrentValueKey = new List<Key>();
-        /// <summary>
-        /// Data that are stored untill a new state arrive
-        /// </summary>
-        List<object> CurrentValueObject = new List<object>();
 
         /// <summary>
         /// List of Pin's that are initiated
