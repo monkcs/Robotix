@@ -1,0 +1,3 @@
+[submodule "WiringPiSharp"]
+	path = WiringPiSharp
+	url = git@github.com:monkcs/WiringPiSharp.git
