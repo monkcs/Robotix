@@ -37,7 +37,7 @@ namespace Robotix.External
 		{
 			PwmValue = value;
 			PwmRange = range;
-			WiringPiSharp.SoftPwm.SoftPwmCreate ((int)pin, value, range);
+			WiringPiSharp.SoftPwm.SoftPwmCreate (pin, value, range);
 		}
 
 		/// <summary>
@@ -80,13 +80,13 @@ namespace Robotix.External
 		{
 			if (value == true)
 			{
-				SoftPwm.SoftPwmWrite ((int)PhysicalPin, PwmValue);
+				SoftPwm.SoftPwmWrite (PhysicalPin, PwmValue);
 				CurrentState = value;
 				JustChanged = true;
 			}
 			else
 			{
-				SoftPwm.SoftPwmWrite ((int)PhysicalPin, 0);
+				SoftPwm.SoftPwmWrite (PhysicalPin, 0);
 				CurrentState = value;
 				JustChanged = true;
 			}
@@ -97,7 +97,7 @@ namespace Robotix.External
 		/// <param name="pwmValue">Value to write</param>
 		public virtual void Write(int pwmValue)
 		{
-			SoftPwm.SoftPwmWrite ((int)PhysicalPin, pwmValue);
+			SoftPwm.SoftPwmWrite (PhysicalPin, pwmValue);
 			PwmValue = pwmValue;
 			CurrentState = true;
 			JustChanged = true;
