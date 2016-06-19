@@ -7,7 +7,7 @@ It encapsulates the pins into easy-to-use objects, polling the input pins, and a
 Functionally
 ------------
 
-The Robotix library uses the C# wrapper [WiringPiSharp](https://github.com/monkcs/WiringPiSharp) to access and call Gordon's [WiringPi](http://wiringpi.com "WiringPi homepage") library. So everything *WiringPi* can do, Robotix can call in a more "manage" way. 
+The Robotix library uses the C# wrapper [WiringPiSharp](https://github.com/monkcs/WiringPiSharp) to access and call Gordon's [WiringPi](http://wiringpi.com "WiringPi homepage") library.  
 
 The pin classes gives you abillity to:
 
@@ -17,4 +17,5 @@ The pin classes gives you abillity to:
 - [x] Digital pin (simply a switch true/false, or input true/false)
 - [x] PWM pin (output pulse-width modulation signals. [Wiki](https://en.wikipedia.org/wiki/Pulse-width_modulation))
 - [ ] SPI pins (Serial Peripheral Interface Bus. [Wiki](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus))
+  -  [x] 7-segment displays (MAX7219,MAX7221 etc.)
 - [ ] I²C pins (Inter-Integrated Circuit. [Wiki](https://en.wikipedia.org/wiki/I%C2%B2C))
