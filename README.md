@@ -8,7 +8,7 @@ The Robotix library uses the C# wrapper [WiringPiSharp](https://github.com/monkc
 
 Functionally
 ------------
-The pin classes gives you abillity to without low-level coding use and access following listed devices and protocol
+The pin classes gives you abillity to without low-level coding use and access following listed devices and protocol. If you want to implement a specific device please fill out a issue or make a pull request.
 #####Currently Robotix contains classes for following pintype:
 
 - [x] Digital pin (simply a switch true/false, or input true/false)
@@ -21,7 +21,7 @@ The pin classes gives you abillity to without low-level coding use and access fo
 Example code
 ------------
 
-This example will setup a pin for input named *button* and a output pin named *led*
+This example will setup a pin for input named __*button*__ and a output pin named __*led*__
 
 ```C#
 using System;
