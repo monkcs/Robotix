@@ -14,9 +14,17 @@ The pin classes gives you abillity to without low-level coding use and access fo
 - [x] Digital pin (simply a switch true/false, or input true/false)
 - [x] PWM pin (output pulse-width modulation signals. [Wiki](https://en.wikipedia.org/wiki/Pulse-width_modulation))
   - [x] Servo control
+  - [x] Motor control
 - [x] SPI pins (Serial Peripheral Interface Bus. [Wiki](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus))
   - [ ] 7-segment displays ([MAX7219, MAX7221](https://www.maximintegrated.com/en/products/power/display-power-control/MAX7221.html))
 - [ ] I²C pins (Inter-Integrated Circuit. [Wiki](https://en.wikipedia.org/wiki/I%C2%B2C))
+
+Compilation and Installation
+----------------------------
+
+The Robotix library depends on the _WiringPiSharp_ and the _WiringPi_ library. Robotix and WiringPiSharp can both be compiled to .dll -files on the development machine together with your code. WiringPi on the other hand must be compiled on the Raspberry Pi itself.
+
+We provide easy to use cmd and bash install scripts over at the installation [wiki page](https://github.com/monkcs/Robotix/wiki/Installation)
 
 Example code
 ------------
