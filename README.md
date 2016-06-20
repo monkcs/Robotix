@@ -29,7 +29,7 @@ We provide easy to use cmd and bash install scripts over at the installation [wi
 Example code
 ------------
 
-This example will setup a pin for input named __*button*__ and a output pin named __*led*__
+This example will setup a pin for input named __*button*__ and a output pin named __*led*__. When the button pin returns `true` (the button is pressed) the __*led*__ pin will output current (and light up the connected LED).
 
 ```C#
 using System;
