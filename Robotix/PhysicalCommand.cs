@@ -352,7 +352,7 @@ namespace Robotix
 			}
 			catch (Exception e) {
 				try {
-					Console.WriteLine ("Error disposing recources: " + e.Message () + " :: " + e.GetBaseException ().ToString ());
+					Console.WriteLine ("Error disposing recources: " + e.Message + " :: " + e.StackTrace);
 				} catch {
 				}
 			}
