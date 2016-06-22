@@ -33,6 +33,12 @@
     <DocumentationFile>bin\Release\RobotixTools.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="WiringPiSharp">
+      <HintPath>..\..\WiringPiSharp\WiringPiSharp\bin\Release\WiringPiSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Cache.cs" />
     <Compile Include="PhysicalCommand.cs" />
     <Compile Include="External\GpioItem.cs" />
