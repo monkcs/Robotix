@@ -312,7 +312,7 @@ namespace Robotix
 			} else {
 					Exceptions?.Invoke (this,
 						new UnhandledExceptionEventArgs (
-						new NullReferenceException ("Not possible to find pin \"" + pin.ToString () + "\""), false));
+						new UnhandledExceptionEventArgs ("Not possible to find pin \"" + pin.ToString () + "\""), false));
 				return null;
 			}
 		}
@@ -330,7 +330,7 @@ namespace Robotix
 			} else {
 				Exceptions.Invoke (this,
 					new UnhandledExceptionEventArgs (
-						new NullReferenceException ("Not possible to find pin \"" + friendlyName + "\""), false));
+						new UnhandledExceptionEventArgs ("Not possible to find pin \"" + friendlyName + "\""), false));
 				return null;
 			}
 		}
