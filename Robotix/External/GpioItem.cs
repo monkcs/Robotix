@@ -1,13 +1,10 @@
-//﻿using FastSerializer;
 using System;
-using System.Runtime.Serialization;
 
 namespace Robotix.External
 {
     /// <summary>
     /// Baseclass for I/O objects like keys and pins
     /// </summary>
-    [Serializable]
     public abstract class GpioItem
 	{
 		/// <summary>
