@@ -33,9 +33,6 @@
     <DocumentationFile>bin\Release\RobotixTools.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FastSerialization">
-      <HintPath>..\..\..\..\..\..\..\Resurs\Mjukvara\Verktyg\Fast Serialization\FastSerialization\bin\Release\FastSerialization.dll</HintPath>
-    </Reference>
     <Reference Include="WiringPiSharp">
       <HintPath>..\..\WiringPiSharp\WiringPiSharp\bin\Release\WiringPiSharp.dll</HintPath>
     </Reference>
