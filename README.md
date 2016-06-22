@@ -44,14 +44,14 @@ namespace Robot
 	{
 		public static void Main() 
 		{
-			RobotControl myRobot = new RobotControl ();
-			myRobot.Start ();
+			RobotControl myRobot = new RobotControl();
+			myRobot.Start();
 
-			Console.WriteLine ("Press any key to stop robot");
-			Console.ReadKey (true);
+			Console.WriteLine("Press any key to stop robot");
+			Console.ReadKey(true);
 
-			myRobot.Stop ();
-			myRobot.Dispose ();
+			myRobot.Stop();
+			myRobot.Dispose();
 		}
 	}
 
@@ -59,33 +59,33 @@ namespace Robot
 
 	class RobotControl : PhysicalCommand
 	{
-		public RobotControl () : base() { }
+		public RobotControl() : base() { }
 		
      /* Will initiate all pins. Place all your pin configuration here. */
-		protected override void Initiate ()
+		protected override void Initiate()
 		{
-			base.Initiate ();
+			base.Initiate();
 
-			Add<DigitalPin> (new DigitalPin (
+			Add<DigitalPin>(new DigitalPin(
 				WPiPinout.P2,   // Pin number
 				PinMode.Input,  // Input or output
 				false,          // Initial output value
 				"button",       // A friendly name for the pin
 				PullMode.Down   // Internal resistor pull mode for input pins
 			));
-			Add<DigitalPin> (new DigitalPin (WPiPinout.P27, PinMode.Output, false, "led", PullMode.Off));
+			Add<DigitalPin>(new DigitalPin(WPiPinout.P27, PinMode.Output, false, "led", PullMode.Off));
 		}
 		
      /* The main method for the robots logic, runs many times per second */
-		protected override void Update ()
+		protected override void Update()
 		{
-			if (GetPin<DigitalPin> ("button").JustChangedTo (true))
+			if (GetPin<DigitalPin>("button").JustChangedTo(true))
 			{
-				GetPin<DigitalPin> ("led").Write (true);
+				GetPin<DigitalPin>("led").Write(true);
 			} 
 			else
 			{
-				GetPin<DigitalPin> ("led").Write (false);
+				GetPin<DigitalPin>("led").Write(false);
 			}
 		}
 	}
