@@ -37,7 +37,9 @@ namespace Robotix.External
 		{
 			PwmValue = value;
 			PwmRange = range;
-			WiringPiSharp.SoftPwm.SoftPwmCreate(pin, value, range);
+			if (!_hardwareLockout) {
+				WiringPiSharp.SoftPwm.SoftPwmCreate (pin, value, range);
+			}
 		}
 
 		/// <summary>
@@ -70,7 +72,9 @@ namespace Robotix.External
 		/// </summary>
 		public override void Write()
 		{
-			Write(!CurrentState);
+			if (!_hardwareLockout) {
+				Write (!CurrentState);
+			}
 		}
 		/// <summary>
 		/// Writes the value high or low to the pin. True for specified pwm value, false for off
@@ -78,17 +82,16 @@ namespace Robotix.External
 		/// <param name="value">Value to write</param>
 		public override void Write(bool value)
 		{
-			if (value == true)
-			{
-				SoftPwm.SoftPwmWrite (PhysicalPin, PwmValue);
-				CurrentState = value;
-				JustChanged = true;
-			}
-			else
-			{
-				SoftPwm.SoftPwmWrite (PhysicalPin, 0);
-				CurrentState = value;
-				JustChanged = true;
+			if (!_hardwareLockout) {
+				if (value == true) {
+					SoftPwm.SoftPwmWrite (PhysicalPin, PwmValue);
+					CurrentState = value;
+					JustChanged = true;
+				} else {
+					SoftPwm.SoftPwmWrite (PhysicalPin, 0);
+					CurrentState = value;
+					JustChanged = true;
+				}
 			}
 		}
 		/// <summary>
@@ -97,10 +100,12 @@ namespace Robotix.External
 		/// <param name="pwmValue">Value to write</param>
 		public virtual void Write(int pwmValue)
 		{
-			SoftPwm.SoftPwmWrite (PhysicalPin, pwmValue);
-			PwmValue = pwmValue;
-			CurrentState = true;
-			JustChanged = true;
+			if (!_hardwareLockout) {
+				SoftPwm.SoftPwmWrite (PhysicalPin, pwmValue);
+				PwmValue = pwmValue;
+				CurrentState = true;
+				JustChanged = true;
+			}
 		}
 	}
 }

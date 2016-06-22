@@ -57,7 +57,7 @@ namespace Robotix.External
 			InitialValue = initialValue;
 			Direction = direction;
 			GPIO.PinMode(pin, direction);
-            if (direction == WiringPi.PinMode.Input)
+			if (direction == WiringPi.PinMode.Input && !_hardwareLockout)
             {
                 GPIO.PullUpDnControl(pin, resistor);
             }
@@ -89,7 +89,7 @@ namespace Robotix.External
         {
             if (!PollingAvalible)
             {
-				if (Direction == WiringPi.PinMode.Input)
+				if (Direction == WiringPi.PinMode.Input && !_hardwareLockout)
 				{
 					return GPIO.DigitalReading (PhysicalPin);
 				}
@@ -117,7 +117,7 @@ namespace Robotix.External
         /// <param name="value">Value to write</param>
         public virtual void Write(bool value)
 		{
-			if (Direction == WiringPi.PinMode.Output)
+			if (Direction == WiringPi.PinMode.Output && !_hardwareLockout)
 			{
 				GPIO.DigitalWrite (PhysicalPin, value);
 				CurrentState = value;
@@ -150,7 +150,7 @@ namespace Robotix.External
         {
             try
             {
-                if (Direction == WiringPi.PinMode.Output)
+				if (Direction == WiringPi.PinMode.Output && !_hardwareLockout)
                 {
                     Write(false);
                 }
