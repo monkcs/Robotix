@@ -10,7 +10,6 @@ namespace Robotix.External
     [Serializable]
     public abstract class GpioItem
 	{
-        [NonSerialized]
         private string _friendlyName = "";
         /// <summary>
         /// A friendly name for easy remembering of item
