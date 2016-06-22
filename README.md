@@ -1,7 +1,7 @@
 Robotix
 =======
 
-A .NET library to make easy use of Raspberry Pi GPIO pins, by manage all parts necessary to get input and output from the GPIO.
+A .NET library to make easy use of Raspberry Pi GPIO pins, by manage all parts necessary to get input and output from the [GPIO](https://www.raspberrypi.org/documentation/usage/gpio/).
 It encapsulates the pins into easy-to-use objects, polling the input pins, and also support "key objects" based of  `System.Console.ConsoleKey` for control by a user.
 
 The Robotix library uses the C# wrapper [WiringPiSharp](https://github.com/monkcs/WiringPiSharp) to access and call Gordon's [WiringPi](http://wiringpi.com "WiringPi homepage") library written in C.
