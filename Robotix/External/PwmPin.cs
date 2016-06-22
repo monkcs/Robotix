@@ -37,7 +37,7 @@ namespace Robotix.External
 		{
 			PwmValue = value;
 			PwmRange = range;
-			WiringPiSharp.SoftPwm.SoftPwmCreate (pin, value, range);
+			WiringPiSharp.SoftPwm.SoftPwmCreate(pin, value, range);
 		}
 
 		/// <summary>

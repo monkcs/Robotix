@@ -49,6 +49,7 @@ namespace Robotix.External
 		/// <param name="direction">The direction of the pin</param>
 		/// <param name="initialValue">The initial value for the pin</param>
         /// <param name="friendlyName">A friendly name for the pin</param>
+		/// <param name="resistor">Setting the internal resistor for input on the pin</param> 
         public DigitalPin(WiringPi.WPiPinout pin, WiringPi.PinMode direction, bool initialValue, string friendlyName, WiringPi.PullMode resistor)
         {
 			PhysicalPin = pin;
