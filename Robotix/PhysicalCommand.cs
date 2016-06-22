@@ -25,10 +25,7 @@ namespace Robotix
 		/// </summary>
 		protected void OnGpioStatesChanged(GpioItem eventArgs)
 		{
-			RawDataEventHandler handler = GpioStates;
-			if (handler != null) {
-				handler (this, eventArgs);
-			}
+			GpioStates?.Invoke (this, eventArgs);
 		}
 
 		/// <summary>
@@ -40,10 +37,7 @@ namespace Robotix
 		/// </summary>
 		protected void OnExceptionsRaised(UnhandledExceptionEventArgs eventArgs)
 		{
-			UnhandledExceptionEventHandler handler = Exceptions;
-			if (handler != null) {
-				handler (this, eventArgs);
-			}
+			Exceptions?.Invoke (this, eventArgs);
 		}
 
 		/// <summary>
@@ -103,14 +97,9 @@ namespace Robotix
             {
                 Setup.WiringPiPiSetup();
             }
-            catch (Exception e)
-            {
-				object temp = Exceptions;
-				if (temp != null)
-				{
-					Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, false));
-				}
-            }
+            catch (Exception e) {
+				Exceptions?.Invoke (this, new UnhandledExceptionEventArgs (e, false));
+			}
         }
 
 
@@ -136,11 +125,8 @@ namespace Robotix
 			{
 				Initiate();
 			}
-			catch (Exception e)
-			{
-				object temp = Exceptions;
-				if (temp != null)
-					Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, true));
+			catch (Exception e) {
+				Exceptions?.Invoke (this, new UnhandledExceptionEventArgs (e, true));
 			}
 
             Runner = new Thread(() =>
@@ -154,11 +140,7 @@ namespace Robotix
 					}
 					catch (Exception e)
 					{
-						object temp = Exceptions;
-						if (temp != null)
-						{
-							Exceptions.Invoke (this, new UnhandledExceptionEventArgs (e, true));
-						}
+						Exceptions?.Invoke (this, new UnhandledExceptionEventArgs (e, true));
 					}
                 });
             Runner.IsBackground = true;
@@ -171,7 +153,7 @@ namespace Robotix
         {
 			try 
 			{
-            	Runner.Abort();
+            	this?.Runner.Abort();
 			} 
 			catch { }
         }
@@ -328,13 +310,9 @@ namespace Robotix
 			if (temp != null) {
 				return temp;
 			} else {
-
-				object tempException = Exceptions;
-				if (tempException != null) {
-					Exceptions.Invoke (this,
+					Exceptions?.Invoke (this,
 						new UnhandledExceptionEventArgs (
-							new Exception ("Not possible to find pin \"" + pin.ToString () + "\""), false));
-				}
+						new NullReferenceException ("Not possible to find pin \"" + pin.ToString () + "\""), false));
 				return null;
 			}
 		}
@@ -345,29 +323,17 @@ namespace Robotix
         /// <param name="friendlyName">Friendly name of the object</param>
         /// <returns></returns>
         protected T GetPin<T>(string friendlyName) where T : DigitalPin
-        {
-			try 
-			{
-				T temp = (T)AvaliblePin.Find(element => element.FriendlyName == friendlyName);
-				if (temp != null)
-				{
-					return temp;
-				}
-				else 
-				{
-					throw new Exception();
-				}
-			}
-			catch
-			{
-				object temp = Exceptions;
-				if (temp != null)
-					Exceptions.Invoke (this,
-						new UnhandledExceptionEventArgs (
-							new Exception ("Not possible to find pin \"" + friendlyName + "\""), false));
+		{
+			T temp = (T)AvaliblePin.Find (element => element.FriendlyName == friendlyName);
+			if (temp != null) {
+				return temp;
+			} else {
+				Exceptions.Invoke (this,
+					new UnhandledExceptionEventArgs (
+						new NullReferenceException ("Not possible to find pin \"" + friendlyName + "\""), false));
 				return null;
 			}
-        }
+		}
         #endregion
 
         /// <summary>
@@ -381,12 +347,14 @@ namespace Robotix
 			{
 				// Disposes all pins
 				foreach (DigitalPin item in AvaliblePin) {
-					if (item != null) {
-						item.Dispose ();
-					}
+					item?.Dispose();
 				}
 			}
-			catch {
+			catch (Exception e) {
+				try {
+					Console.WriteLine ("Error disposing recources: " + e.Message () + " :: " + e.GetBaseException ().ToString ());
+				} catch {
+				}
 			}
 		}
     }
