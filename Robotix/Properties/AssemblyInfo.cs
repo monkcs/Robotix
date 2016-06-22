@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MONKCs studios")]
 [assembly: AssemblyProduct("Robotix")]
-[assembly: AssemblyCopyright("Copyright © MONKCs studios 2015")]
+[assembly: AssemblyCopyright("Free under Apache License Version 2.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
