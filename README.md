@@ -13,7 +13,7 @@ The pin classes gives you abillity to without low-level coding use and access fo
 
 - [x] Digital pin (simply a switch true/false, or input true/false)
 - [x] PWM pin (output pulse-width modulation signals. [Wiki](https://en.wikipedia.org/wiki/Pulse-width_modulation))
-  - [x] Servo control
+  - [x] Servo control. [Wiki](https://en.wikipedia.org/wiki/Servo_control)
   - [x] Motor control
 - [x] SPI pins (Serial Peripheral Interface Bus. [Wiki](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus))
   - [ ] 7-segment displays ([MAX7219, MAX7221](https://www.maximintegrated.com/en/products/power/display-power-control/MAX7221.html))
