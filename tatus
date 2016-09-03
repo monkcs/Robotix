@@ -1,0 +1,616 @@
+[33mcommit 48942f07154e02a8bea064410deb3d1cfb2f48c2[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 21:07:38 2016 +0200
+
+    Changed back to UnhandledExceptionEventArgs
+
+[33mcommit 85730bfe4ea2d6a90a2c9fc59c8afbf9784cd7ba[m
+Merge: bfdf7fb 93115be
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:47:24 2016 +0200
+
+    Merge branch 'master' of github.com:monkcs/Robotix
+
+[33mcommit bfdf7fb15d4ae3713686014ee2f38237d25c031e[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:47:10 2016 +0200
+
+    Removed unused namespaced
+
+[33mcommit 93115beee3d784b49d1b22c2145511de4086c02c[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:38:51 2016 +0200
+
+    Update README.md
+
+[33mcommit e435a9eda895a33b04576bc703105b2f8a7b9760[m
+Merge: d2d5e12 7b2d07b
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:33:56 2016 +0200
+
+    Merge branch 'master' of github.com:monkcs/Robotix
+
+[33mcommit d2d5e12c18f69ec664df4fb37d7cce7700bc5846[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:33:35 2016 +0200
+
+    Added HardwareLockout
+
+[33mcommit d56169fac0753cabe8ce59dd83d0c364b1e37787[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:30:06 2016 +0200
+
+    Fixed a wrong method call
+
+[33mcommit 8240455770d5e32c9d3ba3ac985b38d43a8e1504[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:29:42 2016 +0200
+
+    Added HardwareLockout
+
+[33mcommit cf4a9ac899200bf930f9671f817a024a2fc10f9a[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:17:31 2016 +0200
+
+    Removed serialize
+
+[33mcommit 97e39d60bdce088bb615f9a512e3f9aa4629ca88[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 15:12:28 2016 +0200
+
+    Chenged to C# 6.0 null check
+
+[33mcommit 7b2d07bc5061da55f883c561d811e88ec0b40413[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 13:42:18 2016 +0200
+
+    Update README.md
+
+[33mcommit 2cfbd01dcc11d9756a9ee579929733fbacf295a1[m
+Merge: 063fa6f b11b538
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 13:26:14 2016 +0200
+
+    Backup update
+
+[33mcommit 063fa6f7aaa7666dab48d1f7ac1af2b72acbd571[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 13:23:48 2016 +0200
+
+    Backup update
+
+[33mcommit 8c274a8545a5a6f2bcc7aa61e662851e14229b44[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 13:23:00 2016 +0200
+
+    Fetched new verison
+
+[33mcommit b11b538f30717613c29f28c38d46c3e1e4fb1d88[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 12:00:37 2016 +0200
+
+    Update Robotix.csproj
+
+[33mcommit 4e2a015e159e655d585264fff60727dd870e64c0[m
+Merge: 31e4f5d 68977e7
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 11:59:19 2016 +0200
+
+    Merge branch 'master' of github.com:monkcs/Robotix
+
+[33mcommit 31e4f5da4e212bf38857896e55d7721f0936b25b[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 11:58:35 2016 +0200
+
+    Removed bin folder
+
+[33mcommit 68977e79cd48aa75375e2cf5d3b791e7a07b8023[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 11:56:43 2016 +0200
+
+    Added copyright to license
+
+[33mcommit d0f7ef3f87560adbb79b8644fd8e9693bb9a3045[m
+Merge: 327225a b07e508
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 11:54:15 2016 +0200
+
+    Merge branch 'master' of github.com:monkcs/Robotix
+
+[33mcommit 327225aa97b71eed200188052252209ec5eeb7bb[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 11:53:54 2016 +0200
+
+    Removed userprefs
+
+[33mcommit 0b2950b194a0fd205cc16c83c959f4154fd04a37[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Jun 22 11:52:43 2016 +0200
+
+    Removed .sln~ file
+
+[33mcommit b07e5088e2ada106a1c1bb27060883a90a164160[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jun 20 23:58:00 2016 +0200
+
+    Update README.md
+
+[33mcommit 3ee06bd5e1ca03f2ef52793f6be2d3e657aec6dd[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jun 20 23:24:04 2016 +0200
+
+    Update README.md
+
+[33mcommit 86cf75d530585e31f97d7f24d021c399a0ee76e0[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jun 20 22:27:23 2016 +0200
+
+    Update README.md
+
+[33mcommit 8e75e613d862861d8be68abe059d29743a0ed10a[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jun 20 22:09:10 2016 +0200
+
+    Update README.md
+
+[33mcommit b1879b22e21da7999ad434427db207e394dfefa8[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jun 20 21:05:30 2016 +0200
+
+    Added example code for robotix
+
+[33mcommit 1a9f3af9a9c898bf98202a69180c255bde5f46c3[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Jun 19 21:12:50 2016 +0200
+
+    Update README.md
+
+[33mcommit d9954a9da6191893d574d39bf8f66085679c9b5e[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Apr 3 17:35:14 2016 +0200
+
+    Added xml documentation
+
+[33mcommit acd4eed964b5cc016d4c3fe45c05bb274ad79c83[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Apr 1 23:10:04 2016 +0200
+
+    Added build script
+
+[33mcommit 57eb72fb722f1ab99dad8a181097e9b246fa91ac[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Apr 1 23:06:04 2016 +0200
+
+    Removed wrong cast to int at pin access by pin number
+
+[33mcommit 33b5c2a125bf328df9b8e10439969d8223543524[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Mar 13 21:32:47 2016 +0100
+
+    Removed unused variables
+
+[33mcommit c5853ba62ca9b7d38625e748cbc795f904002f7c[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Mar 13 21:31:29 2016 +0100
+
+    Fixed enum to int cast
+
+[33mcommit 2fb7c4c28338873fc7a905d2498d5112cf16aecb[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Mar 13 21:23:52 2016 +0100
+
+    Added WiringPiSHarp as a submodule
+
+[33mcommit 9cced6758df689ea19634663106a097d282d4983[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Mar 13 21:10:09 2016 +0100
+
+    REmoved WiringPiSharp dll
+
+[33mcommit f7433caa589dd90c85d52de9d127a93250195db8[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Mar 13 20:48:37 2016 +0100
+
+    Backup commit
+
+[33mcommit fb6548bc526f476ed2040b2fde489a12cde1ea4d[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:38:18 2016 +0100
+
+    Removed RobotixTools project, moving all code into main project
+
+[33mcommit 09575359cf2e6cad2f0581437b3d355abae654fd[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:36:08 2016 +0100
+
+    Moved External classes into main project
+
+[33mcommit fc65df169267f4aa5c8a3c4d75e90054df2e5505[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:32:08 2016 +0100
+
+    Removed unused class
+
+[33mcommit 9e724d6b1cdd198404b9434c475d47a4c03225da[m
+Merge: b05b8e9 b5c1dc9
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:19:54 2016 +0100
+
+    Merge branch 'master' of github.com:monkcs/Robotix
+
+[33mcommit b05b8e97a239dc755b3bd7ae02c5027ecc24c942[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:19:04 2016 +0100
+
+    Added .dll to list
+
+[33mcommit 40f90aecf63b28126dfbf361bcd252567d448bbe[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:14:07 2016 +0100
+
+    Backup update
+
+[33mcommit b5c1dc926abeea2d76a0eb0a6eac2ba9a12ac736[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Mar 7 20:11:47 2016 +0100
+
+    Update .gitignore
+
+[33mcommit ec172a66f48b913c7a96630a79fcc38853096d8a[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Mar 2 23:04:28 2016 +0100
+
+    Added missed change of PwmValue
+
+[33mcommit afb3acede918293f6801b505daff02aad6162258[m
+Merge: be280d6 50aea40
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Mar 2 23:02:25 2016 +0100
+
+    Merge branch 'master' of github.com:monkcs/Robotix
+
+[33mcommit be280d69afb3ce2e53dfc1d0c0e03842927ee848[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Mar 2 22:46:37 2016 +0100
+
+    Added protected classes for invoking event from derived classes
+
+[33mcommit 50aea40fdad8594462594e096b461e3f3d40c14f[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 24 16:02:52 2016 +0100
+
+    Update README.md
+
+[33mcommit fe67519f611d27d7a1c68e8a13e4f6d636a0192b[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Feb 16 13:32:27 2016 +0100
+
+    Removed GetPin from throwing a exception just to make the nextcomming code to catch it
+
+[33mcommit 9cd9b91e3bea676945f098bb1960572e6e81abe5[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Feb 16 13:28:34 2016 +0100
+
+    Initiate() invoke Exceptions event if WiringPi fails to setup
+
+[33mcommit c6a4f28e522e39bfd41ac9b201258ee20968f6e6[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Feb 16 13:26:05 2016 +0100
+
+    Added public property for if the background thread is running
+
+[33mcommit 09b2360c8ce594c603fd11a5bd87a08918adf62c[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 20:50:05 2016 +0100
+
+    Changed exception to stop thread
+
+[33mcommit 71ea970ec3056d5b4b32fe37d80c12e1503d2a8f[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 14:57:43 2016 +0100
+
+    Test of exception
+
+[33mcommit ecc9982b209dcd3934935c3c06c0097e441aded2[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 14:45:50 2016 +0100
+
+    Changed return method
+
+[33mcommit 54ee8b557f206f6e60b1f768785206abffee7b7f[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 14:25:23 2016 +0100
+
+    Added exception handler for try-catch
+
+[33mcommit 743c5846c673c7637c48977c4d99c6dd5b20bc2d[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 14:24:05 2016 +0100
+
+    Added exception handler for try-catch
+
+[33mcommit c93c5ebe9c0dbeb03e5aa34ad8deba3be0f8049b[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 14:04:08 2016 +0100
+
+    Added exception handler for try-catch
+
+[33mcommit 9ca44fdabf21caece3dc9250852ae6bbe97359e2[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 13:42:47 2016 +0100
+
+    Backup commit
+
+[33mcommit 37a15691beecf48c849d80e436c024d042f12fba[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Wed Feb 10 13:25:10 2016 +0100
+
+    Removed PhysicalCommandMessage class
+
+[33mcommit c0da6ea5eb6f576425abda2622f15f68303bc4bd[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Jan 29 14:41:26 2016 +0100
+
+    Added delegate for event
+
+[33mcommit a30afd11bd35c761f2ff6ed213877ce162e4b5c2[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Jan 29 14:40:48 2016 +0100
+
+    Changed to public
+
+[33mcommit 87c55695eeab46d309135f2386803d38c452c6a2[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Jan 29 14:35:48 2016 +0100
+
+    Added return message class to the console from robotix
+
+[33mcommit 3a5e5aba761e32633a2d25b09cbc7fe0ab7fc863[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Jan 29 10:24:02 2016 +0100
+
+    Removed example code
+
+[33mcommit f1dff1b788da31b022e97b9a18182c66f6b3aa4f[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 13:09:51 2016 +0100
+
+    Backup commit
+
+[33mcommit fdae943a15df6b84e13bf79a9bda5fe39cc52bcc[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 13:03:14 2016 +0100
+
+    Added Read method that return the current pwm value
+
+[33mcommit 6967e43ebc7746293d110546cb8dd08f47b4b115[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 12:34:50 2016 +0100
+
+    Update
+
+[33mcommit 6455ae5b3145bdc5480f56c8b4e42539dca3a8b8[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 12:24:10 2016 +0100
+
+    Made Read() methods virtual
+
+[33mcommit 33372f6e9680d3c8b8be1d34f0f5ecc153e77ed1[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 11:02:50 2016 +0100
+
+    Added overrided methods for Write()
+
+[33mcommit 5bf4d477b89b0f45be68b355a8eac5047606e17f[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 10:45:07 2016 +0100
+
+    Made two methods virtual for use in derived classes
+
+[33mcommit f2bd8e7478fed4e84cc69fd813e93d7620a0ec0b[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 10:26:49 2016 +0100
+
+    Removed setup method for setup of pin settings
+
+[33mcommit 66556f134d876ee39831f98da06257bcd0abcd64[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 10:23:28 2016 +0100
+
+    Removed exeption if Pinmode is not input or output
+
+[33mcommit 959e81457fa0c3cb24103c3f830867cfce7bdd66[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Jan 25 10:17:25 2016 +0100
+
+    Made Disopse() method virtual
+
+[33mcommit b6830f9fe5b31845bda457c395f9af6af9d85322[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Jan 24 23:16:03 2016 +0100
+
+    Added new class with constructor for pwm pin
+
+[33mcommit e97866c859a9edbe5af261b38aeb46d9097be713[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Jan 24 23:06:15 2016 +0100
+
+    Moved properties setup into protected method
+
+[33mcommit 95785100b31d2c92d21ae9c01357deeb2da93457[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Jan 24 23:02:49 2016 +0100
+
+    Added new class with constructor for pwm pin
+
+[33mcommit 34946d084c3edfc05a4644f00551d44621f21656[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Jan 24 22:18:15 2016 +0100
+
+    Throwing exeption inside constructor if pinmode is not out or in
+
+[33mcommit 57ea5ad6631443d0dc199c269a257fc4ed86d764[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Sun Jan 24 22:10:25 2016 +0100
+
+    Added constructor comments
+
+[33mcommit 0de2127e2b05d6f87e09eb558c64aa1bfbbde0ed[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 21 20:05:56 2016 +0100
+
+    REmoved .NET 6 features
+
+[33mcommit 4b4e1beeebcf822ae9b98128b5174ff74bb583b0[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Jan 15 12:32:28 2016 +0100
+
+    Removed custom serialize
+
+[33mcommit d8c45f60903e21724d46c2fa40ca83c2211cd210[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 14 15:11:25 2016 +0100
+
+    Removed C# 6.0 features
+
+[33mcommit 28e2773903cae589f29ce3bd050c5c93da6635ae[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 14 15:04:37 2016 +0100
+
+    removed C# 6.0 feature
+
+[33mcommit 8e67b432ea5ad38a440e79273e9f0e1c0461fba5[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 14 15:01:40 2016 +0100
+
+    Removed dublett
+
+[33mcommit 98a5f56efab27db163ab32e9cb9dfe052f656b1d[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 14 14:43:57 2016 +0100
+
+    Encoding problem fixed
+
+[33mcommit 6edae099110ef5ee85776c06589d551b1ddebf39[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 14 14:31:48 2016 +0100
+
+    Added compile script
+
+[33mcommit bc076ee7488fcb67e6e7950b31ab36d5a106aa70[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Thu Jan 14 14:10:38 2016 +0100
+
+    Removed example code
+
+[33mcommit a1f92e4cfe5a383d8fa1599040c3baa3b9e51c65[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Fri Dec 25 19:26:01 2015 +0100
+
+[33mcommit 2b3d1fac6e11dae75870accb83229b3b5516ae16[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 13:54:07 2015 +0100
+
+    Changed from public to protected
+
+[33mcommit 3d3aa0de33a0e34579dc727afc841a6bb515c8f9[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 12:38:19 2015 +0100
+
+    Changed .net version to 4.6
+
+[33mcommit 0a6e363ef0dd4730e19e7b12233c2ca3aa970285[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 09:40:07 2015 +0100
+
+    Added null check in dispose method
+
+[33mcommit 703e41e9ca8e9e1f337ed4870ffbe4c9377edc34[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 09:33:49 2015 +0100
+
+    Made it possible to set if a pin can be polled
+
+[33mcommit e6d615367732b775af4609058ac4523efc12f7a7[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 09:25:53 2015 +0100
+
+    Pin will return correct current state for all configurations
+
+[33mcommit e44bbef7a48bdb68d8f2cf3d091276b3dab874f7[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 09:18:30 2015 +0100
+
+    Declared WiringPiSharp.WiringPi as an static class
+
+[33mcommit 7a5ad411ef2064839bf37d65e9a5cd2f2331a5f5[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 09:14:34 2015 +0100
+
+    Declaring WiringPiSharp.WiringPi as a static class
+
+[33mcommit ef7fa78209ffc434fca796d9c1348976449675e9[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Tue Dec 15 09:11:18 2015 +0100
+
+    Made some small cleanup changes is the code
+
+[33mcommit bfa9494c08821114771938e3b3861f44beeda594[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:41:11 2015 +0100
+
+    Adding project file
+
+[33mcommit 705bbe343813d71e07659ee6b982ae0bb3a05cc8[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:39:29 2015 +0100
+
+    Fixed Dispose method
+
+[33mcommit bed3e56cb8193f298fd89ae2c9b932d494c6cc65[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:38:07 2015 +0100
+
+    Fixed Dispose method
+
+[33mcommit 44321736aa7d086266b51553a3852b233d036c86[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:30:09 2015 +0100
+
+    Removed interface IPhysicalCommandCommunications
+
+[33mcommit 4ef722a465fe9138a4f6f118f44fde32352d5570[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:27:19 2015 +0100
+
+    Delete IPhysicalCommandCommunication.cs
+
+[33mcommit 6f48953dc2d7ab9484c869f6acebab6b0f980016[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:26:20 2015 +0100
+
+    Removed interface IPhysicalCommandCommunication
+
+[33mcommit bfe0861cb0203a230da73c3218fc968221dff4dd[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:16:09 2015 +0100
+
+    First upload
+
+[33mcommit f6dc5c151e3eec53b7c367d2a8bade52db5b1c6b[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:14:37 2015 +0100
+
+    First upload
+
+[33mcommit d4eaa311f22d32781e203c3e7a9a8242366607e0[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:10:36 2015 +0100
+
+    First upload
+
+[33mcommit a3ce846a7ae2ebbda46a3c31738e059873b82957[m
+Author: MONKCs studios <ape@monkcs.se>
+Date:   Mon Dec 14 22:02:52 2015 +0100
+
+    Initial commit
