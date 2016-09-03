@@ -38,6 +38,7 @@ namespace Robotix
 		protected void OnExceptionsRaised(UnhandledExceptionEventArgs eventArgs)
 		{
 			Exceptions?.Invoke (this, eventArgs);
+
 		}
 
 		/// <summary>
