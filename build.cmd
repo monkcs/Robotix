@@ -10,9 +10,9 @@ mkdir robotix-compiled
 cd WiringPiSharp
 call build.cmd %path%
 cd ..
-copy WiringPiSharp\WiringPiSharp.dll robotix-compiled\WiringPiSharp.dll
-copy WiringPiSharp\WiringPiSharp.xml robotix-compiled\WiringPiSharp.xml
+move WiringPiSharp\WiringPiSharp.dll robotix-compiled\WiringPiSharp.dll
+move WiringPiSharp\WiringPiSharp.xml robotix-compiled\WiringPiSharp.xml
 csc /target:library /out:Robotix.dll /r:robotix-compiled\WiringPiSharp.dll *.cs External\*.cs /doc:Robotix.xml
 
-copy Robotix.dll robotix-compiled\Robotix.dll
-copy Robotix.xml robotix-compiled\Robotix.xml
+move Robotix.dll robotix-compiled\Robotix.dll
+move Robotix.xml robotix-compiled\Robotix.xml
