@@ -69,7 +69,7 @@ namespace Robotix.External
 		public virtual bool PollingUpdate()
         {
             bool temp = CurrentState;
-            CurrentState = GPIO.DigitalReading(PhysicalPin);
+            CurrentState = GPIO.DigitalRead(PhysicalPin);
             if (CurrentState != temp)
             {
                 JustChanged = true;
@@ -91,7 +91,7 @@ namespace Robotix.External
             {
 				if (Direction == WiringPi.PinMode.Input)
 				{
-					return GPIO.DigitalReading (PhysicalPin);
+					return GPIO.DigitalRead (PhysicalPin);
 				}
                 else
                 {

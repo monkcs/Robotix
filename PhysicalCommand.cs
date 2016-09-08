@@ -96,7 +96,7 @@ namespace Robotix
         {
             try
             {
-                Setup.WiringPiPiSetup();
+                Setup.WiringPiSetup();
             }
             catch (Exception e) {
 				Exceptions?.Invoke (this, new UnhandledExceptionEventArgs (e, false));
